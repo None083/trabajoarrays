@@ -13,32 +13,31 @@ import java.util.Scanner;
 public class Ejer1 {
 
     /**
-     * Leer numero por teclado -> int
-     * Decir si es capicua
-     * Int -> string
-     * String -> char[]
-     * empieza a recorrer el array por ambos extremos
+     * Leer numero por teclado -> int Decir si es capicua Int -> string String
+     * -> char[] empieza a recorrer el array por ambos extremos
      */
     public static void main(String[] args) {
-        
+
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce un número");
         int numero = teclado.nextInt();
-        
+
         String numeroString = Integer.toString(numero);
-        
+
         char[] numeroChar = numeroString.toCharArray();
-        
-        
-        
+        System.out.println(esCapicua(numeroChar));
+
     }
-    
-    private static boolean esCapicua(char[] numeroChar){
-        
-        for (int i = 0; i < numeroChar.length; i++) {
-            
+
+    private static boolean esCapicua(char[] numeroChar) {
+
+        for (int i = 0; i < numeroChar.length / 2; i++) {
+            if (numeroChar[i] != numeroChar[numeroChar.length - 1 - i]) {
+                return false;
+            }
+
         }
-        
+        return true;
     }
-    
+
 }
