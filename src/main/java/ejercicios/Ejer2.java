@@ -27,7 +27,7 @@ public class Ejer2 {
             letras[i] = (char)(65 + i);
             System.out.print(letras[i]);
         }
-        System.out.println("------------------------------------");
+        System.out.println();
         
         Random aleatorio = new Random();
         int tamañoAleatorio = aleatorio.nextInt(11) + 15;
